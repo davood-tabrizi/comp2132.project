@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--author: Davood Tabrizi
+    date: Nov 2022
+    subject: assignment-->
+
+<head>
+    <title> HangMan Game - COMP 2132</title>
+
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="../css/styles.css" media="all" />
+
+    <script src="../scripts/class.js" defer></script>
+    <script src="../scripts/jquery-3.4.1.min.js" defer></script>
+    <script src="../scripts/script.js" defer></script>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <noscript>
+            <div class="warning warning-no-script">
+                <p>Oh no! It's definitely time to panic...</p>
+                <h2>JavaScript Is Disabled!</h2>
+                <p>This page requires JavaScript to run.</p>
+                <p>Please <a href="https://www.whatismybrowser.com/guides/how-to-enable-JavaScript/">enable
+                        JavaScript</a> in your browser then refresh this page.</p>
+            </div>
+        </noscript>
+        <header>
+            <div id="logoImage">
+                <a href="#"><img src="../images/logo.jpg" alt="logo" id="logo"></a>
+            </div>
+            <div id="menu">
+                <div>
+                    <a href="#" class="textColor">Menu</a>
+                </div>
+                <div id="icon">
+                    <a href="#"><img src="../images/icons/search.ico" alt="search_icon" class="icon_image"> </a>
+                    <a href="#"><img src="../images/icons/images.png" alt="sign_icon" class="icon_image"> </a>
+                </div>
+            </div>
+
+        </header>
+
+        <main>
+
+
+            <div id="main_div">
+
+                <div class="demo-box-col demo-box-col-01">
+                    <div class="pac-man-container">
+                        <h2 class="h2main" id="h2main">Welcome to HangMan Game</h2>
+                    </div>
+                </div>
+
+
+                <section class="low_opcity_img" id="grid_1">
+
+                    <div class="row" id="image">
+                        <div class="hangManImage">
+                            <div class="the-draw" id="test1">
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="buttons" id="buttons">
+                    </div>
+
+                    <div id="dataAboutGame">
+
+                        <p id="category">The Chosen Category is: <span id="category_span"></span></p>
+                        <p id="diff">The difficulty is: <span id="diff_span"></span></p>
+
+
+                        <div class="guess" id="guess"></div>
+                        <p id="remain_lives">You only have '<span id="remain_lives_span">7</span>' lives</p>
+                    </div>
+                </section>
+
+            </div>
+
+
+
+            <aside>
+                <a href="#"><img src="../images/aside.png" alt="advertisement"></a>
+                <p id="advertisement">Advertisement</p>
+            </aside>
+
+
+        </main>
+
+
+        <footer>
+
+            <div class="footer_social" id="grid_footer_1">
+                <a href="#"><img src="../images/sosial/Capture.JPG" alt="facebook"></a>
+                <a href="#"><img src="../images/sosial/Capture1.JPG" alt="twitter"></a>
+                <a href="#"><img src="../images/sosial/Capture3.JPG" alt="instagram"></a>
+            </div>
+            <div class="footer_info" id="grid_footer_2">
+                <div> <a href="tel:1-777-000-6789" class="footer_a"><img src="../images/icons/phon.png" alt="phone"
+                            id="phone_image">777-000-6789</a><br></div>
+
+                <div><a href="mailto:info@dtabrizi.ca" class="footer_a">info@dtabrizi.ca</a></div>
+
+
+            </div>
+
+            <div class="footer_info" id="grid_footer_3">
+                <p id="p_footer">Copyright 20** <span>&copy;</span> - COMP2132</p>
+
+            </div>
+
+        </footer>
+        <div id="pop_up_1">
+
+
+            <h2> Welcome to HangMan Game</h2>
+            <p>To start press 'Start' button</p>
+            <p>Consider that you only have 7 lives</p>
+            <div>
+                <button id="pop_up_1_start">Start</button>
+            </div>
+
+
+        </div>
+        <div id="pop_up_2">
+
+
+            <p id="p1"> Please select one of these categories or press "Help" button for more information.</p>
+            <p>Consider that you only have '7' lives.</p>
+
+            <div id="pop_id">
+                <div>
+                    <button id="pop_up_2_capitals">Capitals</button>
+                    <button id="pop_up_2_fruits">Fruits</button>
+                    <button id="pop_up_2_numbers">Numbers</button>
+                </div>
+                <div>
+                    <button id="help_button">Help</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="pop_up_lose">
+
+            <h2>You Lose the Game! </h2>
+            <p>Do you want to play again? Press 'Play Again' button</p>
+
+            <button id="pop_up_play_again1">Play Again</button>
+        </div>
+
+        <div id="pop_up_win">
+
+            <h2>You Win </h2>
+            <h3>Do you want to play again? Press 'Play Again' button</h3>
+
+            <button id="pop_up_play_again2">Play Again</button>
+        </div>
+        <div id="help">
+
+
+            <p>For start you need to choose one of the Capitals, Fruits, or Numbers categories. The computer will choose
+                one random word or number from the chosen category and will display the random word as a hidden underlined
+                word or number. You have 7 lives and you need to choose letters or numbers one by one, so if you select
+                a wrong letter or number, you will lose one of your lives and you will push the hangman one step further to death.
+                In the seventh wrong attempt, you will lose the game, the hangman will die, and you can play again. Just
+                do it and enjoy the game... </p>
+            <h3>To return to the categories, click the button below.</h3>
+
+            <button id="exit">Categories</button>
+        </div>
+        <div id="difficulty">
+
+
+            <p>Please select difficulty level of the game.<br></p>
+
+                <button id="medium">Medium</button>
+                <button id="hard">Hard</button>
+
+        </div>
+
+
+    </div>
+    <audio id="win_sound" src="../audio/win.mpeg" preload="auto"></audio>
+    <audio id="fail_sound" src="../audio/fail.mpeg" preload="auto"></audio>
+    <audio id="wrong_answer_sound" src="../audio/incorrect.mpeg" preload="auto"></audio>
+    <audio id="correct_answer_sound" src="../audio/correct.mpeg" preload="auto"></audio>
+
+
+</body>
+
+</html>
